@@ -1,0 +1,51 @@
+<div class="container" dir="rtl">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>العميل</th>
+                <th>تاريخ التعيين</th>
+                <th>تاريخ إلغاء التعيين</th>
+                <th>المسؤول عن التعيين</th>
+                <th>الدقائق المحلية</th>
+                <th>الدقائق الدولية</th>
+                <th>المبلغ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of data">
+                <td>
+                    <div class="client-info">
+                        <img [src]="item.avatar" class="flag">
+                        <p>{{item.client}}</p>
+                    </div>
+                </td>
+                <td>{{item.appointmentDate}}</td>
+                <td>{{item.cancellationDate}}</td>
+                <td>{{item.responsible}}</td>
+                <td>{{item.localMinutes}}</td>
+                <td>{{item.internationalMinutes}}</td>
+                <td>{{item.total}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="pagination-container">
+        <div class="items-per-page">
+            <span>عرض</span>
+            <select (change)="onItemsPerPageChange($event)" [value]="itemsPerPage">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="20">30</option>
+                <option value="20">40</option>
+                <option value="50">50</option>
+            </select>
+            <span>من أصل {{totalItems}}</span>
+        </div>
+
+        <div class="pagination">
+            <button *ngFor="let page of pages" [class.active]="currentPage === page" (click)="setPage(page)">
+                {{page}}
+            </button>
+        </div>
+    </div>
+</div>

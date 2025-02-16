@@ -1,0 +1,16 @@
+<div class="footer-container">
+    <div class="creator-info">
+        <span class="label">تم الإنشاء بواسطة</span>
+        <div class="content">
+            <img [src]="creator.avatar" class="avatar">
+            <div class="value">{{ creator.name }} </div>
+        </div>
+    </div>
+    <div class="creation-date">
+        <span class="label">تاريخ الإنشاء</span>
+        <div class="content">
+            <div class="value">{{ time.date }}</div>
+            <div class="value">{{ time.time }}</div>
+        </div>
+    </div>
+</div>

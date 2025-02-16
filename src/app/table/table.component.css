@@ -1,0 +1,123 @@
+.container {
+  margin: 1rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+/* Table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table Headers and Cells */
+.data-table th,
+.data-table td {
+  padding: 0.75rem;
+  text-align: center; /* Centers text for better readability */
+  height: 50px;
+}
+
+/* Table Header */
+.data-table thead {
+  background-color: #f4f5f7;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+/* Table Rows */
+.data-table tbody tr:hover {
+  background-color: #f4f5f7;
+}
+
+/* Client Info */
+.client-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.flag {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Pagination */
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Items Per Page Dropdown */
+.items-per-page {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Pagination Buttons */
+.pagination {
+  display: flex;
+  gap: 6px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pagination button.active {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.pagination button:hover:not(.active) {
+  background-color: #f9fafb;
+}
+
+/* 💡 Responsive Fixes */
+
+/* Mobile */
+@media (max-width: 768px) {
+  .data-table th,
+  .data-table td {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  .pagination-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Small Screens */
+@media (max-width: 480px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    font-size: 0.75rem;
+    padding: 0.4rem;
+  }
+}

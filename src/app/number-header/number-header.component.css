@@ -1,0 +1,188 @@
+.main-content {
+  background-color: #f8f8f8;
+}
+
+.status-header {
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+}
+
+/* Header adjustments */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.right-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Number title */
+.hash {
+  background-color: #f8f8f8;
+  padding: 2px;
+  border: none;
+  color: #3b82f6;
+  font-size: 1.3rem;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.close {
+  border: none;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  /* padding: 0.2rem; */
+  background-color: #ddd;
+}
+
+.close:hover {
+  background-color: #bbb;
+}
+
+/* Main Content */
+.content {
+  margin: 1rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Phone number section */
+.phone-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.phone-number {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.status-button {
+  background-color: #47b7ac;
+  margin-right: 5px;
+  font-size: 1rem;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-family: "Neo Sans Arabic";
+}
+
+.status-button:hover {
+  background-color: #3da69b;
+}
+
+/* Grid for details */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Make text center aligned */
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-left: 2px solid #ccc;
+}
+
+.detail-item h3 {
+  color: #6b7280;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.detail-item p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.country-info,
+.client-info {
+  display: flex;
+  gap: 5px;
+}
+/* Avatar and flag */
+.avatar-small,
+.flag {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Truncating text properly */
+.truncate {
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 💡 RESPONSIVENESS */
+
+/* Mobile screens (portrait) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .phone-number {
+    font-size: 1.2rem;
+  }
+
+  .status-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr; /* Single column */
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  .details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  .details-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 💡 RTL Support */
+[dir="rtl"] {
+  .right-content {
+    flex-direction: row-reverse;
+  }
+
+  .details-grid {
+    direction: rtl;
+  }
+
+  .phone-info {
+    justify-content: flex-end;
+  }
+}

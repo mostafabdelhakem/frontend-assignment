@@ -1,0 +1,71 @@
+<div class="main-content">
+    <div class="status-header">
+        <div class="header">
+            <div class="right-content">
+                <span class="hash">#</span>
+                <h2 class="title">عرض الرقم</h2>
+            </div>
+            <button class="close">X</button>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+        <!-- Client header section -->
+        <div class="client-header">
+            <div class="phone-info">
+                <span class="phone-number">{{phoneNumber}}</span>
+                <button class="status-button">قيد الإستخدام</button>
+            </div>
+        </div>
+
+        <!-- Details grid -->
+        <div class="details-grid">
+            <div class="detail-item">
+                <h3>أسم البروتوكول</h3>
+                <p>{{protocolName}}</p>
+            </div>
+
+            <div class="detail-item">
+                <h3>الدولة</h3>
+                <div class="country-info">
+                    <img [src]="country.flag" class="flag">
+                    <p>{{country.name}}</p>
+                </div>
+            </div>
+
+            <div class="detail-item">
+                <h3>العميل الحالي</h3>
+                <div class="client-info">
+                    <img [src]="currentClient.avatar" class="avatar-small">
+                    <p class="truncate">{{currentClient.name}}</p>
+                </div>
+            </div>
+
+            <div class="detail-item" style="border: none;">
+                <h3>عدد الإمتدادات</h3>
+                <p>{{extensionsCount}}</p>
+            </div>
+
+            <div class="detail-item">
+                <h3>الرصيد المستخدم للرقم ككل</h3>
+                <p>{{totalBalance}}</p>
+            </div>
+
+            <div class="detail-item">
+                <h3>الرصيد المستخدم للعميل الحالي</h3>
+                <p>{{clientBalance}}</p>
+            </div>
+
+            <div class="detail-item">
+                <h3>الرصيد الحالي</h3>
+                <p>{{currentBalance}}</p>
+            </div>
+
+            <div class="detail-item" style="border: none;">
+                <h3>تاريخ آخر شحنة</h3>
+                <p>{{lastRechargeDate}}</p>
+            </div>
+        </div>
+    </div>
+</div>
